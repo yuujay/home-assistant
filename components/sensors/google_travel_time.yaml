@@ -1,0 +1,13 @@
+- platform: google_travel_time
+  name: "Drive to Work"
+  api_key: !secret gmaps
+  scan_interval: 3600
+  origin: "place_id:ChIJE3TW8KOC44kRqnIr61ZEiNY"
+  destination: "place_id:ChIJDy_TU0SG44kREwrgvuQfno4"
+
+- platform: google_travel_time
+  name: "Drive to Home"
+  api_key: !secret gmaps
+  scan_interval: 3600
+  origin: "place_id:ChIJDy_TU0SG44kREwrgvuQfno4"
+  destination: "place_id:ChIJE3TW8KOC44kRqnIr61ZEiNY"

@@ -1,0 +1,17 @@
+# You can whitelist files/folders with !, these will not be ignored.
+!*.yaml
+!.gitignore
+!*.md
+
+# Ignore folders.
+*.log
+**/logs
+logs
+tts/
+.storage/
+.cloud/
+*.db
+
+# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+secrets.yaml
+known_devices.yaml

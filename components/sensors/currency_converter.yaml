@@ -1,0 +1,7 @@
+- platform: currencylayer 
+  name: "USD to INR"
+  api_key: !secret curr_layer
+  scan_interval: 86400
+  base: USD
+  quote:
+  - INR

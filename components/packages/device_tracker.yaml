@@ -1,0 +1,13 @@
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 
+        - !secret dt_iphone_ip
+        - !secret hari_oneplus_ip
+        - !secret hass_host_ip
+        - !secret sid_iphone_ip
+        - !secret ujg_mac_ip
+        - !secret ujg_oneplus_ip
+    track_new_devices: True
+    interval_seconds: 20
+    consider_home: 30
+    home_interval: 5

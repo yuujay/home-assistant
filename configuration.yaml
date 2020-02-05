@@ -1,0 +1,15 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+homeassistant:
+  packages: !include_dir_named components/packages
+  customize: !include_dir_merge_named customizations
+
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+group: !include groups.yaml
+scene: !include scenes.yaml
+script: !include scripts.yaml
+sensor: !include_dir_merge_list components/sensors
