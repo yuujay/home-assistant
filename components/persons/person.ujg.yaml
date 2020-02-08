@@ -1,0 +1,4 @@
+- name: UJG
+  id: yuujay
+  device_trackers:
+    - device_tracker.ujg_cable_rcn_com

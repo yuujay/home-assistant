@@ -1,0 +1,3 @@
+- name: telegram_ujg
+  platform: telegram
+  chat_id: !secret ujg_telegram_id

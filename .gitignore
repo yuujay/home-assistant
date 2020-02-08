@@ -11,6 +11,7 @@ tts/
 .storage/
 .cloud/
 *.db
+*-workspace
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 secrets.yaml

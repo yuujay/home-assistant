@@ -8,8 +8,17 @@ homeassistant:
 tts:
   - platform: google_translate
 
+http:
+  server_port: 7777
+#  base_url: https://omega-bot.duckdns.org:7777
+#  ssl_certificate: /ssl/fullchain.pem
+#  ssl_key: /ssl/privkey.pem
+
 automation: !include automations.yaml
 group: !include groups.yaml
+notify: !include_dir_merge_list components/notify
+person: !include_dir_merge_list components/persons
 scene: !include scenes.yaml
 script: !include scripts.yaml
 sensor: !include_dir_merge_list components/sensors
+zone: !include_dir_merge_list components/zones

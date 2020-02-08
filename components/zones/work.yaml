@@ -1,0 +1,5 @@
+- name: Work
+  latitude: 42.299971
+  longitude: -71.351277
+  radius: 250
+  icon: mdi:school

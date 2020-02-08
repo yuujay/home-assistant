@@ -4,6 +4,7 @@ device_tracker:
         - !secret dt_iphone_ip
         - !secret hari_oneplus_ip
         - !secret hass_host_ip
+        - !secret kau_galaxy_8_ip
         - !secret sid_iphone_ip
         - !secret ujg_mac_ip
         - !secret ujg_oneplus_ip

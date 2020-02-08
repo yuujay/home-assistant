@@ -1,0 +1,5 @@
+weather:
+    - platform: darksky
+      api_key: b9c41397e7d2e47a36caa9700f4577a7
+      units: si
+      mode: daily
