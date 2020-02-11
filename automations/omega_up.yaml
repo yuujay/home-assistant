@@ -1,0 +1,10 @@
+- id: 'omega_up'
+  alias: 'Notify UJ on telegram when O.M.E.G.A starts'
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - service: notify.telegram_ujg
+    data:
+      message: 'O.M.E.G.A has started successfully'

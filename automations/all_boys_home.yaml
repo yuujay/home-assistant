@@ -1,0 +1,22 @@
+- id: 'boys_all_home'
+  alias: 'Notify UJ on telegram when everyone is home'  
+  trigger:
+  - platform: template
+    value_template: "{% if is_state('device_tracker.ujg_cable_rcn_com', 'home') %}true{% endif %}"
+  condition: 
+  - condition: state
+    entity_id: device_tracker.fc_2a_9c_a8_9c_85
+    state: home
+  - condition: state
+    entity_id: device_tracker.iphone_xs_max_cable_rcn_com
+    state: home
+  - condition: state
+    entity_id: device_tracker.oneplus6tsingle_cable_rcn_com
+    state: home
+  - condition: state
+    entity_id: device_tracker.galaxy_s8_cable_rcn_com
+    state: home
+  action:
+  - service: notify.telegram_ujg
+    data:
+      message: 'Holaaaa! Everyone is home!!!'

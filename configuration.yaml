@@ -10,11 +10,11 @@ tts:
 
 http:
   server_port: 7777
-#  base_url: https://omega-bot.duckdns.org:7777
+#  base_url: omega-bot.duckdns.org:7777
 #  ssl_certificate: /ssl/fullchain.pem
 #  ssl_key: /ssl/privkey.pem
 
-automation: !include automations.yaml
+automation: !include_dir_merge_list automations
 group: !include groups.yaml
 notify: !include_dir_merge_list components/notify
 person: !include_dir_merge_list components/persons

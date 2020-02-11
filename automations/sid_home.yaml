@@ -1,0 +1,15 @@
+- id: 'sid_home_yes'
+  alias: 'Notify UJ on telegram when sid comes home'  
+  trigger:
+  - platform: state
+    entity_id: device_tracker.iphone_xs_max_cable_rcn_com
+    from: not_home
+    to: home
+  condition: 
+  - condition: time
+    after: '15:00:00'
+    before: '23:00:00'
+  action:
+  - service: notify.telegram_ujg
+    data:
+      message: 'Hey, Sid is home!!!'

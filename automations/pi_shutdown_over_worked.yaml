@@ -1,0 +1,8 @@
+- id: 'pi_shut_down_over_worked'
+  alias: 'Shut down pi when over worked'
+  trigger:
+  - platform: template
+    value_template: '{{ ( states("sensor.processor_use") | float > ( 80 )  | float ) }}'
+  condition: []
+  action:
+    - service: homeassistant.stop

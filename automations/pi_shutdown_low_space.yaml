@@ -1,0 +1,10 @@
+- id: 'pi_shut_down_no_space'
+  alias: 'Shut down pi when there is no space'
+  trigger:
+  - platform: template
+    value_template: '{{ ( states("sensor.disk_free_home") | float < ( 10 )  | float ) }}'
+  condition: []
+  action:
+    - service: notify.telegram_ujg
+      data:
+        message: '!*!*!*!*!*!*!*!*!Memory is going to be full. Check disk soon!*!*!*!*!*!*!*!*!'
