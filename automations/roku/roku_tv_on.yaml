@@ -1,0 +1,12 @@
+- id: 'tv_turn_on'
+  alias: 'Toggle TV on'
+  trigger:
+    platform: state
+    entity_id: input_boolean.roku_power
+    # icon: mdi:television
+    to: 'on'
+  condition: []
+  action:
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.base_station_tv

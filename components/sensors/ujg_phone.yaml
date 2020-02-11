@@ -1,0 +1,12 @@
+- platform: template
+  sensors:
+    battery_phone:
+        friendly_name: UJG Phone Battery
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if state_attr('device_tracker.oneplus_a6013', 'battery_level') %}
+                {{ state_attr('device_tracker.oneplus_a6013', 'battery_level')|round }}
+            {% else %}
+                {{ states('device_tracker.oneplus_a6013') }}
+            {%- endif %}
+        device_class: battery

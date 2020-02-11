@@ -1,0 +1,4 @@
+input_boolean:
+    roku_power:
+      name: Power
+      icon: mdi:television

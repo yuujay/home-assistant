@@ -1,0 +1,11 @@
+- id: 'play_ps4'
+  alias: Play PlayStation on TV
+  trigger:
+    platform: state
+    entity_id: input_select.tv_src
+    to: 'PS4'
+  action:
+    service: media_player.select_source
+    data:
+        entity_id: media_player.base_station_tv
+        source: "HDMI\_3"

@@ -1,0 +1,6 @@
+- platform: history_stats
+  name: TV on time
+  entity_id: media_player.base_station_tv
+  state: 'playing'
+  start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+  end: '{{ now() }}'

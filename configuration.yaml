@@ -19,6 +19,6 @@ group: !include groups.yaml
 notify: !include_dir_merge_list components/notify
 person: !include_dir_merge_list components/persons
 scene: !include scenes.yaml
-script: !include scripts.yaml
+script: !include_dir_merge_list scripts
 sensor: !include_dir_merge_list components/sensors
 zone: !include_dir_merge_list components/zones

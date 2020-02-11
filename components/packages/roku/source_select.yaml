@@ -1,0 +1,12 @@
+input_select:
+    tv_src:
+      name: TV Source
+      options:
+        - YouTube
+        - PS4
+        - Prime
+      initial: YouTube
+      icon: mdi:airplay
+
+
+      

@@ -1,0 +1,11 @@
+- id: 'play_prime'
+  alias: Play Prime on TV
+  trigger:
+    platform: state
+    entity_id: input_select.tv_src
+    to: 'Prime'
+  action:
+    service: media_player.select_source
+    data:
+        entity_id: media_player.base_station_tv
+        source: 'Prime Video'
